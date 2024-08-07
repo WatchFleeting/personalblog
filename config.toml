@@ -68,11 +68,11 @@ defaultContentLanguageInSubdir = false
   #headerImage = "images/background.png"
   headerImage = "https://tu.ltyuanfang.cn/api/fengjing.php"
   showAuthorCard = true # Whether to show author information below the article
-  comments = false
+  comments = true
   showMenuLanguages = true
   customFavicon = "images/photo.png"
 
-  autoLoadComments = false # auto load comment when scrolling down
+  autoLoadComments = true # auto load comment when scrolling down
 
   # paginate style, default use numbered pagination links
   # if true, use original "Previous" and "Next" links.
