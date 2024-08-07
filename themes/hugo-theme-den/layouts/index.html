@@ -1,0 +1,93 @@
+{{ define "header" }}
+<style> .header-container {
+  background: #f5f5f5;
+  padding: 0;
+  min-height: 260px;
+}</style>
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">
+          {{ if .Site.Params.headerTitle }}
+            {{ .Site.Params.headerTitle | safeHTML }}
+          {{ else }}
+            {{ .Site.Title | safeHTML }}
+          {{ end }}
+        </h1>
+        <div class="header-underline"></div>
+        {{ with .Site.Params.description }}
+        <p class="header-subtitle header-subtitle-homepage">{{ . | safeHTML }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ define "main" }}
+{{- $pages := .Pages -}}
+{{- if .IsHome -}}
+  {{- $pages = where .Site.RegularPages "Type" "category" -}}
+{{- end -}}
+<!-- {{- $paginator := .Paginate $pages -}} -->
+<div class="archive-container">
+    <div class="container content archive">
+      <h2>{{ i18n "latest_posts" }}{{ if $paginator.HasPrev }} <small>- {{ i18n "page" }} {{ $paginator.PageNumber }}</small>{{ end }}</h2>
+        <dl class="row">
+            <!-- {{ range $paginator.Pages -}}
+            <dt class="col-md-3">{{ .Date.Format (.Site.Params.dateFormatToUse | default "Mon 02 January 2006") }}</dt>
+            <dd class="col-md-9"><a href="{{ .Permalink }}">{{ .Title }}</a></dd>
+            {{ end }} -->
+            {{ range $index, $page := first 6 $paginator.Pages }}
+              <dt class="col-md-3">{{ $page.Date.Format (.Site.Params.dateFormatToUse | default "Mon 02 January 2006") }}</dt>
+              <dd class="col-md-9"><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></dd>
+            {{ end }}
+        </dl>
+    </div>
+</div>
+<div class=" home-bg">
+  <div class="container archive popup-container">
+    <p>你是大西洋暖流，我是摩尔曼斯克港。因为你的到来，我的世界成了不冻港。
+  </p>
+  <p>
+    你是伊犁河谷地，我是大西洋水汽。即使相距五六千公里，我也会努力绕过天山，给你带来降雨。
+  </p>
+  <p>
+    守望流年，一个喜爱地理，技术的可爱（普通）学生。
+  </p>
+  <p>
+    不如交个朋友！
+  </p>
+
+    <div style="text-align: center;margin-top: 20px;">
+    <img src="images/person.jpg" class="responsive-image-qr"/>
+  </div>
+  </div>
+</div> 
+<script> 
+function addStars() {
+  const container = document.querySelector('.home-bg');
+  const numStars = 100; // 设置星星的数量
+
+  for (let i = 0; i < numStars; i++) {
+    const star = document.createElement('span');
+    star.classList.add('star');
+    star.innerHTML = '✨';
+    star.style.top = `${getRandomNumber(22, 80)}%`;
+    star.style.left = `${getRandomNumber(0, 100)}%`;
+    container.appendChild(star);
+  }
+}
+
+function getRandomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+//addStars();
+
+
+</script>
+
+   
+<!-- {{ partial "pagination.html" . }} -->
+{{ end }}
