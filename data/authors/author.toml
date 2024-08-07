@@ -1,0 +1,10 @@
+url = "https://www.showcodeba.com"
+
+[name]
+display = "守望流年"
+
+[image]
+url = "images/person.jpg"
+
+[zh-cn]
+description = "一个喜欢地理，技术的可爱学生。"
