@@ -44,7 +44,7 @@ defaultContentLanguageInSubdir = false
   pages = "/:slug/"
 
 [author]                     # required
-  name = "蓝域星火有限公司集团"
+  name = "蓝域星河有限公司集团"
 
 [sitemap]                    # required
   changefreq = "daily"
@@ -72,7 +72,7 @@ defaultContentLanguageInSubdir = false
   showMenuLanguages = true
   customFavicon = "images/photo.png"
 
-  autoLoadComments = true # auto load comment when scrolling down
+  autoLoadComments = false # auto load comment when scrolling down
 
   # paginate style, default use numbered pagination links
   # if true, use original "Previous" and "Next" links.
