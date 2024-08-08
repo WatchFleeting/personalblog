@@ -186,7 +186,7 @@ defaultContentLanguageInSubdir = false
 
   [[languages.zh-cn.menu.main]]
     parent = "产品"
-    name = '星雨机器人'
+    name = '星语机器人'
     weight = 20
     identifier = "robot"
     url = "category/robot"
