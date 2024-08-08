@@ -2,7 +2,7 @@
 # ---- General Settings --------------- #
 # ------------------------------------- #
 baseURL = "https://www.showcodeba.com"
-title = "蓝域星河有限公司集团"
+title = "守望流年"
 theme = "hugo-theme-den"
 enableRobotsTXT = true       # generate robots.txt
 enableEmoji = true           # use emoji support
@@ -14,7 +14,7 @@ rssLimit = 20                # limit number of entries in RSS feeds
 disablePathToLower = true 
 
 # Copyright, appears in the footer
-copyright = "守望流年"             # default: author.name
+copyright = "蓝域星河有限公司集团"             # default: author.name
 
 # Pagination
 # number of entries per page for archives, tags and categories
