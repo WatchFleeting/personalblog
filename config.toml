@@ -61,7 +61,7 @@ defaultContentLanguageInSubdir = false
 
   # site info (optional)
   keywords = ["地理", "技术","编程"]
-  description = "一个喜爱地理，技术的学生。"
+  description = "一个喜爱地理，技术，编程的学生。"
   logoTitle = " " # shown on top-left, default: title
   siteLogoImage = ""     # shown besides logoTitle
   # headerTitle = "Den"                   # default: title
